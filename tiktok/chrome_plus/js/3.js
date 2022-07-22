@@ -67,6 +67,7 @@ document.getElementById("action_invite_button").onclick=function(){
         if (document.getElementById("daily-apply-buiz-btn").disabled==false){
             setTimeout(function(){
                 document.getElementById("daily-apply-buiz-btn").click()
+                document.getElementsByClassName("add-product-last-operate")[0].click()
 
             } ,2000)
             setTimeout(function(){
@@ -75,7 +76,6 @@ document.getElementById("action_invite_button").onclick=function(){
                 document.getElementById("contact_wechat").value="17376510894"
                 document.getElementById("cooperation_desc").value="你好，我是PUCO品牌方，有高佣好品，诚挚邀请你合作，手机微信同号：17376510894"
                 document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
-                document.getElementsByClassName("add-product-last-operate")[0].click()
                 console.log("111")
                 setTimeout(function(){
                     document.getElementsByClassName("auxo-btn-primary")[2].click()
