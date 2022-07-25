@@ -75,11 +75,11 @@ document.getElementById("action_invite_button").onclick=function(){
                     document.getElementById("contact_wechat").value="17376510894"
                     document.getElementById("cooperation_desc").value="你好，我是PUCO品牌方，有高佣好品，诚挚邀请你合作，手机微信同号：17376510894"
                     console.log("111")
-                    setTimeout(function(){
-                        document.getElementsByClassName("auxo-btn-primary")[2].click()
-                        console.log(".....")
-                        next_do_it()
-                    },4000)
+                    
+                    document.getElementsByClassName("auxo-btn-primary")[2].click()
+                    console.log(".....")
+                    next_do_it()
+                    
                 },3000)
             } ,3000)    
         }else{
