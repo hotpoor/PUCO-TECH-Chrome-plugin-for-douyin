@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "PUCO plug-in",
+    "version": "0.0.1",
+    "description": "抖店工具",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action":{
+        "default_icon":"images/icon19.png",
+        "default_popup":"popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches":["http://*/*", "https://*/*"],
+            "js":["js/jquery-1.12.4.min.js","js/3.js"],
+            "css":[],
+            "run_at": "document_end",
+            "all_frames": false 
+        }
+    ],
+    "background":{
+        "scripts":["js/jquery-1.12.4.min.js","background.js"]
+    },
+    "permissions": ["webRequest","webRequestBlocking","http://*/*", "https://*/*/*","https://*/*", "ws://*/*", "wss://*/*"],
+    "content_security_policy":"script-src 'self'  'unsafe-inline' 'unsafe eval'  https://www.qianshanghua.com; object-src 'self'"
+}
