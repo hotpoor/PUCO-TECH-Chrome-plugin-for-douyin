@@ -40,7 +40,8 @@ document.getElementById("uid_button").onclick=function(){
     var current_num = 0
     function scroll_it(){
         if(current_num > num){
-            console.log("已滚动完毕")
+            // console.log("已滚动完毕")
+            alert("已滚动完毕")
             text_show()
             localStorage.setItem("a",JSON.stringify(uids))
             localStorage.setItem("a_nub","0")
@@ -67,21 +68,59 @@ document.getElementById("action_invite_button").onclick=function(){
         if (document.getElementById("daily-apply-buiz-btn").disabled==false){
             setTimeout(function(){
                 document.getElementById("daily-apply-buiz-btn").click()
-                document.getElementsByClassName("add-product-last-operate")[0].click()
                 setTimeout(function(){
-                    document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
-                    document.getElementById("contact_name").value="王浩林"
-                    document.getElementById("contact_mobile").value="17376510894"
-                    document.getElementById("contact_wechat").value="17376510894"
-                    document.getElementById("cooperation_desc").value="你好，我是PUCO品牌方，有高佣好品，诚挚邀请你合作，手机微信同号：17376510894"
-                    console.log("111")
-                    
-                    document.getElementsByClassName("auxo-btn-primary")[2].click()
-                    console.log(".....")
-                    next_do_it()
-                    
-                },3000)
-            } ,3000)    
+                    document.getElementsByClassName("add-product-last-operate")[0].click()
+                    document.getElementsByClassName("add-product-last-operate")[0].click()
+                    document.getElementsByClassName("add-product-last-operate")[0].click()
+                    document.getElementsByClassName("add-product-last-operate")[0].click()
+                    document.getElementsByClassName("add-product-last-operate")[0].click()
+                    document.getElementsByClassName("add-product-last-operate")[0].click()
+                    document.getElementsByClassName("add-product-last-operate")[0].click()
+                    document.getElementsByClassName("add-product-last-operate")[0].click()
+                    document.getElementsByClassName("add-product-last-operate")[0].click()
+                    setTimeout(function(){
+                        if ((document.getElementsByClassName("auxo-message-custom-content auxo-message-info").length==0)==true){
+                            setTimeout(function(){
+                                document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
+                                setTimeout(function(){
+                                    document.getElementById("contact_name").value="王浩林"
+                                    document.getElementById("contact_mobile").value="17376510894"
+                                    document.getElementById("contact_wechat").value="17376510894"
+                                    document.getElementById("cooperation_desc").value="你好，我是PUCO品牌方，有高佣好品，诚挚邀请你合作，手机微信同号：17376510894"
+                                    console.log("111")
+                                    document.getElementById("contact_wechat").value="17376510894"
+                                    if(document.getElementById("contact_name").value=="王浩林"
+                                        &&document.getElementById("contact_mobile").value=="17376510894"
+                                        &&document.getElementById("contact_wechat").value=="17376510894"
+                                        &&document.getElementById("cooperation_desc").value=="你好，我是PUCO品牌方，有高佣好品，诚挚邀请你合作，手机微信同号：17376510894"){
+                                            document.getElementsByClassName("auxo-btn-primary")[2].click()
+            
+                                        }
+                                        if(document.getElementById("contact_name").value=="王浩林"
+                                        &&document.getElementById("contact_mobile").value=="17376510894"
+                                        &&document.getElementById("contact_wechat").value=="17376510894"
+                                        &&document.getElementById("cooperation_desc").value=="你好，我是PUCO品牌方，有高佣好品，诚挚邀请你合作，手机微信同号：17376510894"){
+                                            document.getElementsByClassName("auxo-btn-primary")[2].click()
+                                        }
+                                        else
+                                            next_do_it()
+                                        // document.getElementsByClassName("auxo-btn-primary")[2].click()
+                                    next_do_it()
+                                },4000)     
+                            },2000)
+        
+                        }
+                        else{
+                            next_do_it()
+                        }
+
+                    },1000)
+
+
+                })
+
+
+            },4000)    
         }else{
             next_do_it()
         }
