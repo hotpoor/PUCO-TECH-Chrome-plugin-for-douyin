@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BitFEG</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/lightweight-charts.standalone.production.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+        body{
+            width: 580px;
+            height: 560px;
+            overflow-y: auto;
+            background-color: #000000;
+            color: #ffffff;
+            border-radius: 4px;
+        }
+        .logo_color{
+            color: #622294;
+        }
+        .hide{
+            display: none;
+        }
+        .tab_btns{
+            width: 100%;
+            display: flex;
+            height: 40px;
+        }
+        .tab_btn{
+            flex: 1;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            cursor: pointer;
+            color: #999;
+        }
+        .current{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab_btns">
+        <div class="tab_btn current" data-name="markets">行情</div>
+        <div class="tab_btn" data-name="contract">合约</div>
+        <div class="tab_btn" data-name="discover">发现</div>
+        <div class="tab_btn" data-name="me">我</div>
+    </div>
+    <div class="tab_main_areas">
+        <div class="tab_main_area" data-name="markets">
+            <div>行情·Markets</div>
+            <div>
+                <div id="tv_chart_container">
+            </div>
+        </div>
+        <div class="tab_main_area hide" data-name="contract">
+            <div>合约·Contract</div>
+        </div>
+        <div class="tab_main_area hide" data-name="discover">
+            <div>发现·Discover</div>
+        </div>
+        <div class="tab_main_area hide" data-name="me">
+            <div>我·Me</div>
+        </div>
+        <a href="index.html">index.html</a>
+        <button class="abc">800</button>
+        <button class="cba">360</button>
+    </div>
+    <script src="js/bitfeg_v2.js"></script>
+</body>
+</html>
