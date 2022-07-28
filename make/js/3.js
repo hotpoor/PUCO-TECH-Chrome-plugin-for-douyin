@@ -71,12 +71,14 @@ document.getElementById("action_invite_button").onclick=function(){
                 document.getElementById("daily-apply-buiz-btn").click()
                 document.getElementsByClassName("add-product-last-operate")[0].click()
                 setTimeout(function(){
+                    document.getElementById("cos_ratio_3525387084720399074").value="27"
                     document.getElementById("contact_name").value="马珂"
                     document.getElementById("contact_mobile").value="13248088831"
                     document.getElementById("contact_wechat").value="13248088831"
                     document.getElementById("cooperation_desc").value="你好，我是PUCO品牌方，有高佣好品，诚挚邀请你合作，手机微信同号：13248088831"
                     document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
                     setTimeout(function(){
+                        document.getElementById("cos_ratio_3525387084720399074").value="27"
                         document.getElementById("contact_name").value="马珂"
                         document.getElementById("contact_mobile").value="13248088831"
                         document.getElementById("contact_wechat").value="13248088831"
