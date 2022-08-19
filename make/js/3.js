@@ -67,30 +67,46 @@ document.getElementById("action_invite_button").onclick=function(){
         if (document.getElementById("daily-apply-buiz-btn")==null){
             next_do_it()
         }else if (document.getElementById("daily-apply-buiz-btn").disabled==false){
+
             setTimeout(function(){
                 document.getElementById("daily-apply-buiz-btn").click()
                 document.getElementsByClassName("add-product-last-operate")[0].click()
                 setTimeout(function(){
-                    document.getElementById("cos_ratio_3525387084720399074").value="27"
-                    document.getElementById("contact_name").value="马珂"
-                    document.getElementById("contact_mobile").value="13248088831"
-                    document.getElementById("contact_wechat").value="13248088831"
-                    document.getElementById("cooperation_desc").value="你好，我是PUCO品牌方，有高佣好品，诚挚邀请你合作，手机微信同号：13248088831"
-                    document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
+
+                    // document.getElementById("cos_ratio_3525387084720399074").value="27"
+                    document.getElementById("contact_name").value="费振中"
+                    document.getElementById("contact_mobile").value="18018629009"
+                    document.getElementById("contact_wechat").value="18018629009"
+                    document.getElementById("cooperation_desc").value="您好\n我们是抖音彩妆工厂合作品牌黛庄，自家工厂同时也是DIOR、欧莱雅、雅诗兰黛生产商；\n咱们的品类人群相似度很高呀，我们也与许多美食主播合作过，转化率都达到了20%以上，期待与您有机会合作呢。"
+                    document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
                     setTimeout(function(){
-                        document.getElementById("cos_ratio_3525387084720399074").value="27"
-                        document.getElementById("contact_name").value="马珂"
-                        document.getElementById("contact_mobile").value="13248088831"
-                        document.getElementById("contact_wechat").value="13248088831"
-                        document.getElementById("cooperation_desc").value="你好，我是PUCO品牌方，有高佣好品，诚挚邀请你合作，手机微信同号：13248088831"                
-                        
+
+                        document.getElementById("contact_name").value="费振中"
+                        document.getElementById("contact_mobile").value="18018629009"
+                        document.getElementById("contact_wechat").value="18018629009"
+                        document.getElementById("cooperation_desc").value="您好\n我们是抖音彩妆工厂合作品牌黛庄，自家工厂同时也是DIOR、欧莱雅、雅诗兰黛生产商；\n咱们的品类人群相似度很高呀，我们也与许多美食主播合作过，转化率都达到了20%以上，期待与您有机会合作呢。"
+
+                        tmp_list = document.getElementsByClassName("auxo-input")
+                        if(tmp_list.length > 0){
+                            for(var i=0; i < tmp_list.length; i++)
+                            {
+                               if(tmp_list[i].id != null){
+                                // console.log("当前测试：",tmp_list[i].id)
+                                if(tmp_list[i].id.includes("cos_ratio_"))
+                                {
+                                    tmp_list[i].value = Math.floor(Math.random() * 6) + 21
+                                }
+                               } 
+                            }
+                        }
+
                         if (document.getElementsByClassName("add-product-no-product").length==0){
                             document.getElementsByClassName("auxo-btn-primary")[2].click()
                         }
                         next_do_it()
                     },1000)    
                 },3000)
-            } ,3000)    
+            } ,2500)    
         }else{
             next_do_it()
         }
@@ -110,7 +126,6 @@ document.getElementById("action_invite_button").onclick=function(){
     }   
     
 
-
     if (window.location.href.indexOf("buyin.jinritemai.com")>-1){
         console.log("当前为抖音界面")
         a=JSON.parse(localStorage.getItem("a"))
@@ -124,9 +139,7 @@ document.getElementById("action_invite_button").onclick=function(){
         else{
             next_do_it()
         }
-    }
-    
-    
+    }  
 }
 
 if (is_stop_invite == "false"){
