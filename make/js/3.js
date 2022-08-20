@@ -94,7 +94,7 @@ document.getElementById("action_invite_button").onclick=function(){
                                 // console.log("当前测试：",tmp_list[i].id)
                                 if(tmp_list[i].id.includes("cos_ratio_"))
                                 {
-                                    tmp_list[i].value = Math.floor(Math.random() * 6) + 21
+                                    tmp_list[i].value = Math.floor(Math.random() * 4) + 25
                                 }
                                } 
                             }
