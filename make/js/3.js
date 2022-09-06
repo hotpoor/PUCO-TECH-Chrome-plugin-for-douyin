@@ -77,14 +77,14 @@ document.getElementById("action_invite_button").onclick=function(){
                     document.getElementById("contact_name").value="费振中"
                     document.getElementById("contact_mobile").value="18018629009"
                     document.getElementById("contact_wechat").value="18018629009"
-                    document.getElementById("cooperation_desc").value="您好\n我们是抖音彩妆工厂合作品牌黛庄，自家工厂同时也是DIOR、欧莱雅、雅诗兰黛生产商；\n咱们的品类人群相似度很高呀，我们也与许多美食主播合作过，转化率都达到了20%以上，期待与您有机会合作呢。"
+                    document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
                     document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
                     setTimeout(function(){
 
                         document.getElementById("contact_name").value="费振中"
                         document.getElementById("contact_mobile").value="18018629009"
                         document.getElementById("contact_wechat").value="18018629009"
-                        document.getElementById("cooperation_desc").value="您好\n我们是抖音彩妆工厂合作品牌黛庄，自家工厂同时也是DIOR、欧莱雅、雅诗兰黛生产商；\n咱们的品类人群相似度很高呀，我们也与许多美食主播合作过，转化率都达到了20%以上，期待与您有机会合作呢。"
+                        document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
 
                         tmp_list = document.getElementsByClassName("auxo-input")
                         if(tmp_list.length > 0){
@@ -94,7 +94,8 @@ document.getElementById("action_invite_button").onclick=function(){
                                 // console.log("当前测试：",tmp_list[i].id)
                                 if(tmp_list[i].id.includes("cos_ratio_"))
                                 {
-                                    tmp_list[i].value = Math.floor(Math.random() * 6) + 21
+                                    // 5 ~ 8
+                                    tmp_list[i].value = Math.floor(Math.random() * 4) + 5
                                 }
                                } 
                             }
