@@ -74,40 +74,40 @@ document.getElementById("action_invite_button").onclick=function(){
                 setTimeout(function(){
 
                     // document.getElementById("cos_ratio_3525387084720399074").value="27"
-                    document.getElementById("contact_name").value="费振中"
-                    document.getElementById("contact_mobile").value="18018629009"
-                    document.getElementById("contact_wechat").value="18018629009"
-                    document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
+                    document.getElementById("contact_name").value="赖先生"
+                    document.getElementById("contact_mobile").value="15986708619"
+                    document.getElementById("contact_wechat").value="15986708619"
+                    document.getElementById("cooperation_desc").value="您好！看到您的带货销售额很好，我们也想真诚的邀约，我们是一家化妆刷生产工厂，之前做品牌代加工，现在想做自己的品牌，所以想请您帮忙带货，品质我们是有保证，期盼能合作！:-)"
                     document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
                     setTimeout(function(){
 
-                        document.getElementById("contact_name").value="费振中"
-                        document.getElementById("contact_mobile").value="18018629009"
-                        document.getElementById("contact_wechat").value="18018629009"
-                        document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
+                        document.getElementById("contact_name").value="赖先生"
+                        document.getElementById("contact_mobile").value="15986708619"
+                        document.getElementById("contact_wechat").value="15986708619"
+                        document.getElementById("cooperation_desc").value="您好！看到您的带货销售额很好，我们也想真诚的邀约，我们是一家化妆刷生产工厂，之前做品牌代加工，现在想做自己的品牌，所以想请您帮忙带货，品质我们是有保证，期盼能合作！:-)"
 
-                        tmp_list = document.getElementsByClassName("auxo-input")
-                        if(tmp_list.length > 0){
-                            for(var i=0; i < tmp_list.length; i++)
-                            {
-                               if(tmp_list[i].id != null){
-                                // console.log("当前测试：",tmp_list[i].id)
-                                if(tmp_list[i].id.includes("cos_ratio_"))
-                                {
-                                    // 5 ~ 8
-                                    tmp_list[i].value = Math.floor(Math.random() * 4) + 5
-                                }
-                               } 
-                            }
-                        }
+                        // tmp_list = document.getElementsByClassName("auxo-input")
+                        // if(tmp_list.length > 0){
+                        //     for(var i=0; i < tmp_list.length; i++)
+                        //     {
+                        //        if(tmp_list[i].id != null){
+                        //         // console.log("当前测试：",tmp_list[i].id)
+                        //         if(tmp_list[i].id.includes("cos_ratio_"))
+                        //         {
+                        //             // 5 ~ 8
+                        //             tmp_list[i].value = Math.floor(Math.random() * 4) + 5
+                        //         }
+                        //        } 
+                        //     }
+                        // }
 
                         if (document.getElementsByClassName("add-product-no-product").length==0){
                             document.getElementsByClassName("auxo-btn-primary")[2].click()
                         }
                         next_do_it()
-                    },1000)    
-                },3000)
-            } ,2500)    
+                    },2000)    
+                },3500)
+            } ,3000)    
         }else{
             next_do_it()
         }
