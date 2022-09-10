@@ -105,8 +105,8 @@ document.getElementById("action_invite_button").onclick=function(){
                             document.getElementsByClassName("auxo-btn-primary")[2].click()
                         }
                         next_do_it()
-                    },1500)    
-                },3500)
+                    },2000)    
+                },3000)
             } ,3000)    
         }else{
             next_do_it()
