@@ -1,19 +1,19 @@
 a=document.createElement("button")
 a.innerText="抓取UID"
 a.id="uid_button"
-a.style="position:fixed;top:0px;right:0px;z-index:999;width:200px;height:30px;"
+a.style="position:fixed;top:0px;right:0px;z-index:999;width:200px;height:24px;"
 document.getElementsByTagName("body")[0].append(a)
 
 b=document.createElement("button")
 b.innerText="开始邀约"
 b.id="action_invite_button"
-b.style="position:fixed;top:0px;right:200px;z-index:999;width:200px;height:30px;"
+b.style="position:fixed;top:0px;right:200px;z-index:999;width:200px;height:24px;"
 document.getElementsByTagName("body")[0].append(b)
 
 c=document.createElement("button")
 c.innerText="停止邀约"
 c.id="stop_invite_button"
-c.style="position:fixed;top:0px;right:400px;z-index:999;width:200px;height:30px;"
+c.style="position:fixed;top:0px;right:400px;z-index:999;width:200px;height:24px;"
 document.getElementsByTagName("body")[0].append(c)
 
 var uids = []
