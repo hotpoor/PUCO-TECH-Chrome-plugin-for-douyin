@@ -106,7 +106,7 @@ document.getElementById("action_invite_button").onclick=function(){
                         }
                         next_do_it()
                     },1500)    
-                },3000)
+                },2000)
             } ,1500)    
         }else{
             next_do_it()
@@ -123,7 +123,7 @@ document.getElementById("action_invite_button").onclick=function(){
             console.log("我在做")
             window.location.href="https://buyin.jinritemai.com/dashboard/servicehall/daren-profile?uid="+a[next_a_nub]
             //console.log(a[next_a_nub])
-        },3000)
+        },3000 + Math.floor(Math.random() * 100) * 5)
     }   
     
 
@@ -135,7 +135,7 @@ document.getElementById("action_invite_button").onclick=function(){
         if (window.location.href.indexOf("https://buyin.jinritemai.com/dashboard/servicehall/daren-profile?")>-1){
             setTimeout(function(){
                 do_it()
-            },5000)
+            },5000 + Math.floor(Math.random() * 100) * 5)
         }
         else{
             next_do_it()
@@ -147,5 +147,5 @@ if (is_stop_invite == "false"){
     setTimeout(function(){
         console.log("================")
         document.getElementById("action_invite_button").click()
-    },5000)
+    },5000 + Math.floor(Math.random() * 100) * 5)
 }
