@@ -64,6 +64,7 @@ document.getElementById("action_invite_button").onclick=function(){
     localStorage.setItem("stop_invite",is_stop_invite)
 
     function do_it(){
+        // console.log("random second: "+ Math.floor(Math.random() * 100) * 5 + "ms")
         if (document.getElementById("daily-apply-buiz-btn")==null){
             next_do_it()
         }else if (document.getElementById("daily-apply-buiz-btn").disabled==false){
@@ -105,9 +106,9 @@ document.getElementById("action_invite_button").onclick=function(){
                             document.getElementsByClassName("auxo-btn-primary")[2].click()
                         }
                         next_do_it()
-                    },1500)    
-                },2000)
-            } ,1500)    
+                    },1250)    
+                },1500)
+            } ,1250)    
         }else{
             next_do_it()
         }
@@ -120,7 +121,7 @@ document.getElementById("action_invite_button").onclick=function(){
             a_nub=JSON.parse(localStorage.getItem("a_nub"))
             next_a_nub = a_nub+1
             localStorage.setItem("a_nub",next_a_nub)
-            console.log("我在做")
+            console.log("我在做: " + 3000 + Math.floor(Math.random() * 100) * 5 + "ms")
             window.location.href="https://buyin.jinritemai.com/dashboard/servicehall/daren-profile?uid="+a[next_a_nub]
             //console.log(a[next_a_nub])
         },3000 + Math.floor(Math.random() * 100) * 5)
