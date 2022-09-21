@@ -135,7 +135,7 @@ document.getElementById("action_invite_button").onclick=function(){
         if (window.location.href.indexOf("https://buyin.jinritemai.com/dashboard/servicehall/daren-profile?")>-1){
             setTimeout(function(){
                 do_it()
-            },4000 + Math.floor(Math.random() * 10) * 100)
+            },4000 + Math.floor(Math.random() * 6) * 100)
         }
         else{
             next_do_it()
@@ -147,5 +147,5 @@ if (is_stop_invite == "false"){
     setTimeout(function(){
         console.log("================")
         document.getElementById("action_invite_button").click()
-    },4000 + Math.floor(Math.random() * 10) * 100)
+    },4000 + Math.floor(Math.random() * 6) * 100)
 }
