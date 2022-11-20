@@ -1,3 +1,4 @@
+/* UI添加html button */
 a=document.createElement("button")
 a.innerText="抓取UID"
 a.id="uid_button"
@@ -16,6 +17,7 @@ c.id="stop_invite_button"
 c.style="position:fixed;top:0px;right:400px;z-index:999;width:200px;height:30px;"
 document.getElementsByTagName("body")[0].append(c)
 
+/*页面加载 整个JS被更新*/
 var uids = []
 
 is_stop_invite = localStorage.getItem("stop_invite")
@@ -24,10 +26,28 @@ if (is_stop_invite == undefined){
     localStorage.setItem("stop_invite",is_stop_invite)
 }
 
+if (is_stop_invite == "false"){
+
+    console.log("start")
+    setTimeout(function(){
+        console.log("================")
+        // document.getElementById("action_invite_button").click()
+        // 开始邀约
+        startInvite()
+    },3000)
+}
+else{
+    // 邀约停止
+    console.log("===> invite stopped！")
+}
+
+/* 停止邀约-按钮 */
 document.getElementById("stop_invite_button").onclick=function(){
     is_stop_invite = "true"
     localStorage.setItem("stop_invite",is_stop_invite)
 }
+
+/* 获取UID */
 document.getElementById("uid_button").onclick=function(){
     function text_show(){
         // var uids = []
@@ -56,77 +76,88 @@ document.getElementById("uid_button").onclick=function(){
     }
     scroll_it()
 }
-document.getElementById("action_invite_button").onclick=function(){
-    // localStorage.setItem("a",JSON.stringify(uids))
-    // localStorage.setItem("a_nub","0")
 
-    is_stop_invite = "false"
-    localStorage.setItem("stop_invite",is_stop_invite)
+/* 开始邀约-按钮 */
+function do_it(){
 
-    function do_it(){
-        if (document.getElementById("daily-apply-buiz-btn")==null){
-            next_do_it()
-        }else if (document.getElementById("daily-apply-buiz-btn").disabled==false){
+    if (document.getElementById("daily-apply-buiz-btn")==null){
+        next_do_it()
+    }
+    else if (document.getElementById("daily-apply-buiz-btn").disabled==false){
 
+        setTimeout(function(){
+            document.getElementById("daily-apply-buiz-btn").click()
+            document.getElementsByClassName("add-product-last-operate")[0].click()
             setTimeout(function(){
-                document.getElementById("daily-apply-buiz-btn").click()
-                document.getElementsByClassName("add-product-last-operate")[0].click()
+
+                // document.getElementById("cos_ratio_3525387084720399074").value="27"
+                document.getElementById("contact_name").value="费振中"
+                document.getElementById("contact_mobile").value="18018629009"
+                document.getElementById("contact_wechat").value="18018629009"
+                document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
+                document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
                 setTimeout(function(){
 
-                    // document.getElementById("cos_ratio_3525387084720399074").value="27"
                     document.getElementById("contact_name").value="费振中"
                     document.getElementById("contact_mobile").value="18018629009"
                     document.getElementById("contact_wechat").value="18018629009"
                     document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
-                    document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
-                    setTimeout(function(){
 
-                        document.getElementById("contact_name").value="费振中"
-                        document.getElementById("contact_mobile").value="18018629009"
-                        document.getElementById("contact_wechat").value="18018629009"
-                        document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
-
-                        tmp_list = document.getElementsByClassName("auxo-input")
-                        if(tmp_list.length > 0){
-                            for(var i=0; i < tmp_list.length; i++)
+                    tmp_list = document.getElementsByClassName("auxo-input")
+                    if(tmp_list.length > 0){
+                        for(var i=0; i < tmp_list.length; i++)
+                        {
+                           if(tmp_list[i].id != null){
+                            // console.log("当前测试：",tmp_list[i].id)
+                            if(tmp_list[i].id.includes("cos_ratio_"))
                             {
-                               if(tmp_list[i].id != null){
-                                // console.log("当前测试：",tmp_list[i].id)
-                                if(tmp_list[i].id.includes("cos_ratio_"))
-                                {
-                                    // 5 ~ 8
-                                    tmp_list[i].value = Math.floor(Math.random() * 4) + 5
-                                }
-                               } 
+                                // 5 ~ 8
+                                tmp_list[i].value = Math.floor(Math.random() * 4) + 5
                             }
+                           } 
                         }
+                    }
 
-                        if (document.getElementsByClassName("add-product-no-product").length==0){
-                            document.getElementsByClassName("auxo-btn-primary")[2].click()
-                        }
-                        next_do_it()
-                    },1500)    
-                },2000 + Math.floor(Math.random() * 6) * 100)
-            } ,1500)    
-        }else{
-            next_do_it()
-        }
-        
-    }
+                    if (document.getElementsByClassName("add-product-no-product").length==0){
+                        document.getElementsByClassName("auxo-btn-primary")[2].click()
+                    }
+                    next_do_it()
+                },1500)    
+            },2000 + Math.floor(Math.random() * 6) * 100)
+        } ,1500)    
+    }else{
+        next_do_it()
+    }    
+}
 
-    function next_do_it(){
-        console.log("innext")
+function next_do_it(){
+    console.log("innext --->")
+    a_nub=JSON.parse(localStorage.getItem("a_nub"))
+    next_a_nub = a_nub+1
+    // console.log(a[next_a_nub])
+    if(a[next_a_nub] == undefined){
+
+        is_stop_invite = "true"
+        localStorage.setItem("stop_invite",is_stop_invite)
         setTimeout(function(){
-            a_nub=JSON.parse(localStorage.getItem("a_nub"))
-            next_a_nub = a_nub+1
-            localStorage.setItem("a_nub",next_a_nub)
-            console.log("我在做")
-            window.location.href="https://buyin.jinritemai.com/dashboard/servicehall/daren-profile?uid="+a[next_a_nub]
-            //console.log(a[next_a_nub])
-        },4000)
-    }   
-    
 
+            console.log("uid 解析错误: undefined ---> invite next stopped！")
+            window.location.href="https://buyin.jinritemai.com/dashboard/servicehall/daren-square"
+        },4000 + Math.floor(Math.random() * 6) * 100)
+    }
+    else{
+
+        setTimeout(function(){
+
+            localStorage.setItem("a_nub",next_a_nub)
+            console.log("我在做---->")
+            window.location.href="https://buyin.jinritemai.com/dashboard/servicehall/daren-profile?uid="+a[next_a_nub]
+        },4000 + Math.floor(Math.random() * 6) * 100)
+    }
+}
+
+function startInvite(){
+    
     if (window.location.href.indexOf("buyin.jinritemai.com")>-1){
         console.log("当前为抖音界面")
         a=JSON.parse(localStorage.getItem("a"))
@@ -143,9 +174,9 @@ document.getElementById("action_invite_button").onclick=function(){
     }  
 }
 
-if (is_stop_invite == "false"){
-    setTimeout(function(){
-        console.log("================")
-        document.getElementById("action_invite_button").click()
-    },4000 + Math.floor(Math.random() * 6) * 100)
+document.getElementById("action_invite_button").onclick=function(){
+
+    is_stop_invite = "false"
+    localStorage.setItem("stop_invite",is_stop_invite)
+    startInvite()
 }
