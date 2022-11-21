@@ -111,6 +111,9 @@ function do_it(){
                             // console.log("当前测试：",tmp_list[i].id)
                             if(tmp_list[i].id.includes("cos_ratio_"))
                             {
+                                temp_list[i].focus()
+                                temp_list[i].select()
+                                document.execCommand('inserttext',false,Math.floor(Math.random() * 4) + 5)
                                 // 5 ~ 8
                                 tmp_list[i].value = Math.floor(Math.random() * 4) + 5
                             }
