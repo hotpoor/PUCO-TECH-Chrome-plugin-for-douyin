@@ -77,7 +77,11 @@ document.getElementById("uid_button").onclick=function(){
     scroll_it()
 }
 
+<<<<<<< HEAD
 
+=======
+/* 根据element id 修改 inputbox 文本内容 */
+>>>>>>> origin/local_lucky
 function changeContentByElementId(elementid,content){
 
     tmp_iptbox=document.getElementById(elementid)
@@ -116,14 +120,14 @@ function do_it(){
 
                     tmp_list = document.getElementsByClassName("auxo-input")
                     if(tmp_list.length > 0){
-                        for(var i=0; i < tmp_list.length; i++)
-                        {
+                        for(var i=0; i < tmp_list.length; i++){
+
                            if(tmp_list[i].id != null){
                             // console.log("当前测试：",tmp_list[i].id)
                             if(tmp_list[i].id.includes("cos_ratio_")){
 
-                                // 将原来的值取出来 上升 1~3个点
-                                tmpvalue = parseInt(tmp_list[i].value) + Math.floor(Math.random() * 4)
+                                // 将原来的值取出来 上升 1~2个点
+                                tmpvalue = parseInt(tmp_list[i].value) + Math.floor(Math.random() * 3)
                                 // console.log("id：",i,"value:",tmpvalue)
                                 tmp_list[i].focus()
                                 tmp_list[i].select()
@@ -197,3 +201,4 @@ document.getElementById("action_invite_button").onclick=function(){
     localStorage.setItem("stop_invite",is_stop_invite)
     startInvite()
 }
+
