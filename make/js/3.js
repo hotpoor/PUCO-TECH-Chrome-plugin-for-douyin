@@ -91,18 +91,18 @@ function do_it(){
             setTimeout(function(){
 
                 // document.getElementById("cos_ratio_3525387084720399074").value="27"
-                document.getElementById("contact_name").value="书店w"
+                document.getElementById("contact_name").value="书店 小w"
                 document.getElementById("contact_mobile").value="13699153901"
                 document.getElementById("contact_wechat").value="13699153901"
-                document.getElementById("cooperation_desc").value="您好，\n我是人邮旗下的分社负责人艾德书店，我们有几本书想跟您合作，如果感兴趣交换下联系方式吧！\n微信：13699153901或者留下您的联系方式 我加您\n书籍种类多不及枚举，添加联系方式，佣金具体可谈"
+                document.getElementById("cooperation_desc").value="您好\n我是人邮旗下的分社负责人艾德书店，我们有几本书想跟您合作！\n微信：13699153901\n书籍种类多不及枚举添加联系方式，佣金具体可谈"
                 
                 document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
                 setTimeout(function(){
 
-                    document.getElementById("contact_name").value="书店w"
+                    document.getElementById("contact_name").value="书店 小w"
                     document.getElementById("contact_mobile").value="13699153901"
                     document.getElementById("contact_wechat").value="13699153901"
-                    document.getElementById("cooperation_desc").value="您好，\n我是人邮旗下的分社负责人艾德书店，我们有几本书想跟您合作，如果感兴趣交换下联系方式吧！\n微信：13699153901或者留下您的联系方式 我加您\n书籍种类多不及枚举，添加联系方式，佣金具体可谈"
+                    document.getElementById("cooperation_desc").value="您好\n我是人邮旗下的分社负责人艾德书店，我们有几本书想跟您合作！\n微信：13699153901\n书籍种类多不及枚举添加联系方式，佣金具体可谈"
                     tmp_list = document.getElementsByClassName("auxo-input")
                     // if(tmp_list.length > 0){
                     //     for(var i=0; i < tmp_list.length; i++)
