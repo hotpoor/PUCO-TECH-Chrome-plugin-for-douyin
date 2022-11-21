@@ -77,6 +77,17 @@ document.getElementById("uid_button").onclick=function(){
     scroll_it()
 }
 
+/* 根据element id 修改 inputbox 文本内容 */
+function changeContentByElementId(elementid,content){
+
+    tmp_iptbox=document.getElementById(elementid)
+    tmp_iptbox.focus()
+    tmp_iptbox.select()
+    //先清零 否则有可能有页面长度限制
+    document.execCommand('inserttext',false, '')
+    return document.execCommand('inserttext',false, content)
+}
+
 /* 开始邀约-按钮 */
 function do_it(){
 
@@ -91,28 +102,34 @@ function do_it(){
             setTimeout(function(){
 
                 // document.getElementById("cos_ratio_3525387084720399074").value="27"
-                document.getElementById("contact_name").value="费振中"
-                document.getElementById("contact_mobile").value="18018629009"
-                document.getElementById("contact_wechat").value="18018629009"
-                document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
+                // document.getElementById("contact_name").value="书店 小w"
+                // document.getElementById("contact_mobile").value="13699153901"
+                // document.getElementById("contact_wechat").value="13699153901"
+                // document.getElementById("cooperation_desc").value="您好\n我是人邮旗下的分社负责人艾德书店，我们有几本书想跟您合作！\n微信：13699153901\n书籍种类多不及枚举添加联系方式，佣金具体可谈"                
                 document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
                 setTimeout(function(){
 
-                    document.getElementById("contact_name").value="费振中"
-                    document.getElementById("contact_mobile").value="18018629009"
-                    document.getElementById("contact_wechat").value="18018629009"
-                    document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
+                    changeContentByElementId("contact_name","书店 小w")
+                    changeContentByElementId("contact_mobile","13699153901")
+                    changeContentByElementId("contact_wechat","13699153901")
+                    changeContentByElementId("cooperation_desc","您好\n我是人民邮电出版社旗下的分社书店‘艾德书店’，\n官方书书目全、种类多不及枚举。请添加联系方式，佣金具体可谈（诚意合作）\n微信：13699153901")
 
                     tmp_list = document.getElementsByClassName("auxo-input")
                     if(tmp_list.length > 0){
-                        for(var i=0; i < tmp_list.length; i++)
-                        {
+                        for(var i=0; i < tmp_list.length; i++){
+
                            if(tmp_list[i].id != null){
                             // console.log("当前测试：",tmp_list[i].id)
-                            if(tmp_list[i].id.includes("cos_ratio_"))
-                            {
+                            if(tmp_list[i].id.includes("cos_ratio_")){
+
+                                // 将原来的值取出来 上升 1~3个点
+                                tmpvalue = parseInt(tmp_list[i].value) + Math.floor(Math.random() * 3)
+                                // console.log("id：",i,"value:",tmpvalue)
+                                tmp_list[i].focus()
+                                tmp_list[i].select()
+                                document.execCommand('inserttext',false, tmpvalue)
                                 // 5 ~ 8
-                                tmp_list[i].value = Math.floor(Math.random() * 4) + 5
+                                // tmp_list[i].value = Math.floor(Math.random() * 4) + 5
                             }
                            } 
                         }
@@ -180,3 +197,4 @@ document.getElementById("action_invite_button").onclick=function(){
     localStorage.setItem("stop_invite",is_stop_invite)
     startInvite()
 }
+
