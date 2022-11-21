@@ -77,6 +77,17 @@ document.getElementById("uid_button").onclick=function(){
     scroll_it()
 }
 
+
+function changeContentByElementId(elementid,content){
+
+    tmp_iptbox=document.getElementById(elementid)
+    tmp_iptbox.focus()
+    tmp_iptbox.select()
+    //先清零 否则有可能有页面长度限制
+    document.execCommand('inserttext',false, '')
+    return document.execCommand('inserttext',false, content)
+}
+
 /* 开始邀约-按钮 */
 function do_it(){
 
@@ -91,17 +102,17 @@ function do_it(){
             setTimeout(function(){
 
                 // document.getElementById("cos_ratio_3525387084720399074").value="27"
-                document.getElementById("contact_name").value="费振中"
-                document.getElementById("contact_mobile").value="18018629009"
-                document.getElementById("contact_wechat").value="18018629009"
-                document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
+                // document.getElementById("contact_name").value="费振中"
+                // document.getElementById("contact_mobile").value="18018629009"
+                // document.getElementById("contact_wechat").value="18018629009"
+                // document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
                 document.getElementsByClassName("auxo-drawer-body")[0].scrollTo(0,document.getElementsByClassName("auxo-drawer-body")[0].scrollHeight)
                 setTimeout(function(){
 
-                    document.getElementById("contact_name").value="费振中"
-                    document.getElementById("contact_mobile").value="18018629009"
-                    document.getElementById("contact_wechat").value="18018629009"
-                    document.getElementById("cooperation_desc").value="您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。"
+                    changeContentByElementId("contact_name","费振中")
+                    changeContentByElementId("contact_mobile","18018629009")
+                    changeContentByElementId("contact_wechat","18018629009")
+                    changeContentByElementId("cooperation_desc","您好！\nLuck幸运珠宝，专业认证，佣金佳。水贝对水贝品质保障，高净值带货优选。\n诚意期待与您有机会合作呢。")
 
                     tmp_list = document.getElementsByClassName("auxo-input")
                     if(tmp_list.length > 0){
@@ -109,13 +120,16 @@ function do_it(){
                         {
                            if(tmp_list[i].id != null){
                             // console.log("当前测试：",tmp_list[i].id)
-                            if(tmp_list[i].id.includes("cos_ratio_"))
-                            {
-                                temp_list[i].focus()
-                                temp_list[i].select()
-                                document.execCommand('inserttext',false,Math.floor(Math.random() * 4) + 5)
+                            if(tmp_list[i].id.includes("cos_ratio_")){
+
+                                // 将原来的值取出来 上升 1~3个点
+                                tmpvalue = parseInt(tmp_list[i].value) + Math.floor(Math.random() * 4)
+                                // console.log("id：",i,"value:",tmpvalue)
+                                tmp_list[i].focus()
+                                tmp_list[i].select()
+                                document.execCommand('inserttext',false, tmpvalue)
                                 // 5 ~ 8
-                                tmp_list[i].value = Math.floor(Math.random() * 4) + 5
+                                // tmp_list[i].value = Math.floor(Math.random() * 4) + 5
                             }
                            } 
                         }
