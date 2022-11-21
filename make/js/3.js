@@ -77,11 +77,7 @@ document.getElementById("uid_button").onclick=function(){
     scroll_it()
 }
 
-<<<<<<< HEAD
-
-=======
 /* 根据element id 修改 inputbox 文本内容 */
->>>>>>> origin/local_lucky
 function changeContentByElementId(elementid,content){
 
     tmp_iptbox=document.getElementById(elementid)
