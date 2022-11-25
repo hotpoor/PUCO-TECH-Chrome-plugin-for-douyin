@@ -114,26 +114,26 @@ function do_it(){
                     changeContentByElementId("contact_wechat","13699153901")
                     changeContentByElementId("cooperation_desc","您好\n我是人民邮电出版社旗下的分社书店‘艾德书店’，\n官方书书目全、种类多不及枚举。请添加联系方式，佣金具体可谈（诚意合作）\n微信：13699153901")
 
-                    tmp_list = document.getElementsByClassName("auxo-input")
-                    if(tmp_list.length > 0){
-                        for(var i=0; i < tmp_list.length; i++){
+                    // tmp_list = document.getElementsByClassName("auxo-input")
+                    // if(tmp_list.length > 0){
+                    //     for(var i=0; i < tmp_list.length; i++){
 
-                           if(tmp_list[i].id != null){
-                            // console.log("当前测试：",tmp_list[i].id)
-                            if(tmp_list[i].id.includes("cos_ratio_")){
+                    //        if(tmp_list[i].id != null){
+                    //         // console.log("当前测试：",tmp_list[i].id)
+                    //         if(tmp_list[i].id.includes("cos_ratio_")){
 
-                                // 将原来的值取出来 上升 1~3个点
-                                tmpvalue = parseInt(tmp_list[i].value) + Math.floor(Math.random() * 3)
-                                // console.log("id：",i,"value:",tmpvalue)
-                                tmp_list[i].focus()
-                                tmp_list[i].select()
-                                document.execCommand('inserttext',false, tmpvalue)
-                                // 5 ~ 8
-                                // tmp_list[i].value = Math.floor(Math.random() * 4) + 5
-                            }
-                           } 
-                        }
-                    }
+                    //             // 将原来的值取出来 上升 1~3个点
+                    //             tmpvalue = parseInt(tmp_list[i].value) + Math.floor(Math.random() * 3)
+                    //             // console.log("id：",i,"value:",tmpvalue)
+                    //             tmp_list[i].focus()
+                    //             tmp_list[i].select()
+                    //             document.execCommand('inserttext',false, tmpvalue)
+                    //             // 5 ~ 8
+                    //             // tmp_list[i].value = Math.floor(Math.random() * 4) + 5
+                    //         }
+                    //        } 
+                    //     }
+                    // }
 
                     if (document.getElementsByClassName("add-product-no-product").length==0){
                         document.getElementsByClassName("auxo-btn-primary")[2].click()
