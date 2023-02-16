@@ -85,7 +85,7 @@ function changeContentByElementId(elementid,content){
     tmp_iptbox.select()
     //先清零 否则有可能有页面长度限制
     document.execCommand('inserttext',false, '')
-    return document.execCommand('inserttext',false, content)
+    return document.execCommand('inserttext',false, content)   
 }
 
 /* 开始邀约-按钮 */
